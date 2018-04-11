@@ -14,3 +14,4 @@ Compared with CUBLAS, C PROGRAM, INTEL MKL, FFTW, CUFFT, CUDA's efficiency is 25
 CUDA is already used for BLAST sequence comparison. To fulfill bio-sequence comparison's accuracy.
 Smith-Waterman algorithm is proposed to use CUDA's compacity by diamond-shape data layout. And tree-shape algorithm is introduced to calculate maximum match value. The performance is improved by 120 times.
 But TM-Align still need to be implemented on CUDA.
+## Sequence comparison
