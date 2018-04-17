@@ -14,4 +14,10 @@ Compared with CUBLAS, C PROGRAM, INTEL MKL, FFTW, CUFFT, CUDA's efficiency is 25
 CUDA is already used for BLAST sequence comparison. To fulfill bio-sequence comparison's accuracy.
 Smith-Waterman algorithm is proposed to use CUDA's compacity by diamond-shape data layout. And tree-shape algorithm is introduced to calculate maximum match value. The performance is improved by 120 times.
 But TM-Align still need to be implemented on CUDA.
-## Sequence comparison
+## Protein structure comparison
+Annotation of similar amino acid residue of protein sequences. If there is a gap, use '-' to indicate. The key of the problem is those long, variant and human-labor incapable sequences. So human's knowledge is used to construct algorithms not to duplicate and boring work. Protein sequence comparison is an important part of Strutural Informatics, aiming at prediction of protein's sequence and functional correlation analysis. For example, we can classify proteins with similar strutures and investigate homology of proteins. And also helping to understand the structural differences between proteins and how these differences affect the functions of proteins. 
+2 types of algorithms to compare protein sequences
+* Clustering based method. Comparing the distances of amino acid residues within the sequences.
+* Superposition based method. To Minimize the distance of relative amino acid residues after rotation and translation.
+TM-align used amino acid residue based method and 2-level comparision method simultaneously.
+
