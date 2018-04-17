@@ -8,8 +8,15 @@
 Build 1 or more similiar 3D structure of 1 Protein based on its shape and 3-level structure
 ## Evaluation of comparison results
 Test structure vs Standard structure. Through structure comparison algorithm, we obtain a set of atom coordinates & RMSD of the 2 structures. A translation vector **t** and rotation vector **u**. And by inverse translation and rotation, test protein will be compared to standard protein.
-## CUDA's advantage
-Compared with CUBLAS, C PROGRAM, INTEL MKL, FFTW, CUFFT, CUDA's efficiency is 25 times more than CPU.
+## CUDA's advantage and Programming Model
+### Compared with CUBLAS, C PROGRAM, INTEL MKL, FFTW, CUFFT, CUDA's efficiency is 25 times more than CPU.
+* The Key optimization of CPU focuses on serial operation, but that of GPU focuses on parallel-operation.
+* CPU focus on improving frequency, parallel-level and numbers of the cores.
+* Typical application of 'CPU+GPU' Heterogeneous parallel processing is real-time image rendering. 
+* GPU is mostly used in high computation desity and simple logic condition.
+### GPU's programming model has only 1 host(CPU), GPU is working as the device of the Host.
+* memories fo GPU and CPU are independent, namely host's memory and device's memory.
+* Program running in GPU is called 'kernel function' and must be defined using "\_global_". And kernel functions only will be called by Host's program. 
 ## Application Bioinformatics status
 CUDA is already used for BLAST sequence comparison. To fulfill bio-sequence comparison's accuracy.
 Smith-Waterman algorithm is proposed to use CUDA's compacity by diamond-shape data layout. And tree-shape algorithm is introduced to calculate maximum match value. The performance is improved by 120 times.
