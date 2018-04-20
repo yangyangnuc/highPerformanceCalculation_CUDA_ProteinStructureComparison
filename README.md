@@ -49,14 +49,10 @@ MVLSEGEWQLVLHVWAKVEADVAGHGQDILIRLFKSHPETLEKFDRVKHLKTEAEMKASEDLKKHGVTVLTALGAILKKK
 ![](result.png?raw=true)
 
 
-
-
-
-
-
 * TM-Score produce the homology（同源性） and correlation（相关性） of Proteins. The result is between (0, 1], <0.17 means no match from PDB.
 * TM-Align adopts dynamic programming and rotation matrix of TM-score. Its result is between (0,1], <0.2 means no similarity between the structures, >0.5 means the structures share some same foldings.
 * Differences between TM-align and TM-score  
 TM-score is used to compare 2 models with the same amino acid residues and sequences.
 TM-align is devoted to commpare 2 structures with different sequeces or unknown equivalence and output the best-match residues's TM-score. Here TM-score has the same definition of previous TM-score.
-* Proteins applicable to TM-align are 
+
+## 
