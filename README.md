@@ -29,8 +29,34 @@ Annotation of similar amino acid residue of protein sequences. If there is a gap
 TM-align used amino acid residue based method and 2-level comparision method simultaneously.
 
 ## TM-align
+There is a demo here https://zhanglab.ccmb.med.umich.edu/TM-align/
+
+* Result of the demo
+Name of Chain_1: A404296                                           
+Name of Chain_2: B404296                                           
+Length of Chain_1:  154 residues
+Length of Chain_2:  146 residues
+
+Aligned length=  143, RMSD=   1.83, Seq_ID=n_identical/n_aligned= 0.245
+TM-score= 0.81453 (if normalized by length of Chain_1)
+TM-score= 0.85377 (if normalized by length of Chain_2)
+(You should use TM-score normalized by length of the reference protein)
+
+(":" denotes aligned residue pairs of d < 5.0 A, "." denotes other aligned residues)
+MVLSEGEWQLVLHVWAKVEADVAGHGQDILIRLFKSHPETLEKFDRVKHLKTEAEMKASEDLKKHGVTVLTALGAILKKK--G-HHEAELKPLAQSHATKHKIPIKYLEFISEAIIHVLHSRHPGNFGADAQGAMNKALELFRKDIAAKYKELGYQG
+ :::::::::::::::::::::::::::::::::::::::::::::::::: ::::::::::::::::::::::::::::  : :::::::::::::: :::::::::::::::::::::::::  :::::::::::::::::::::: :     ::
+-SLSAAEADLAGKSWAPVFANKNANGLDFLVALFEKFPDSANFFADFKGKS-VADIKASPKLRDVSSRIFTRLNEFVNNAANAGKMSAMLSQFAKEHV-GFGVGSAQFENVRSMFPGFVASVAA--PPAGADAAWTKLFGLIIDALKA-A-----GA
+
+
+
+
+
+
+
+
 * TM-Score produce the homology（同源性） and correlation（相关性） of Proteins. The result is between (0, 1], <0.17 means no match from PDB.
 * TM-Align adopts dynamic programming and rotation matrix of TM-score. Its result is between (0,1], <0.2 means no similarity between the structures, >0.5 means the structures share some same foldings.
 * Differences between TM-align and TM-score  
 TM-score is used to compare 2 models with the same amino acid residues and sequences.
-TM-align is devoted to commpare 2 structures with different sequeces and output the best-match residues's TM-score. Here TM-score has the same definition of previous TM-score.
+TM-align is devoted to commpare 2 structures with different sequeces or unknown equivalence and output the best-match residues's TM-score. Here TM-score has the same definition of previous TM-score.
+* Proteins applicable to TM-align are 
