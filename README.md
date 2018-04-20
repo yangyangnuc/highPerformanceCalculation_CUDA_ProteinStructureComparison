@@ -54,5 +54,6 @@ MVLSEGEWQLVLHVWAKVEADVAGHGQDILIRLFKSHPETLEKFDRVKHLKTEAEMKASEDLKKHGVTVLTALGAILKKK
 * Differences between TM-align and TM-score  
 TM-score is used to compare 2 models with the same amino acid residues and sequences.
 TM-align is devoted to commpare 2 structures with different sequeces or unknown equivalence and output the best-match residues's TM-score. Here TM-score has the same definition of previous TM-score.
-
-## 
+* 2 amino acid dehydration synthesis, -COOH（carboxyl）   H2N(azyl)
+H2N-CHR1-COOH  +   H2N-CHR2-COOH     ----->   H2N-CHR1-COOH  +   H2N-CHR2-COOH
+TM-align only take alpha(first)-carbon chain into account. At the beginning, TM-align will find a better rotation matrix **U** and shift vector **t**. Using these 2 parameters to registrate the test structure to a better matching position. Then align the test structure and source structure based on distances of amino acid residues.
